@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+    <script>
+      const dogs = [{ name: "Snickers", age: 2 }, { name: "hugo", age: 8 }];
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+      // Regular
+      console.log("hello");
 
-    // Regular
+      // Interpolated
+      console.log("Hello I am a %s string!", "random");
 
-    // Interpolated
+      // Styled
+      console.log("%c I am some great text", "font-size: 15px;");
 
-    // Styled
+      // warning!
+      console.warn("Uh Oh");
 
-    // warning!
+      // Error :|
+      console.error("Shit!");
 
-    // Error :|
+      // Info
+      console.info("This is some information");
 
-    // Info
+      // Testing
+      console.assert(1 === 1, "That is wrong!");
 
-    // Testing
+      // clearing
+      console.clear();
 
-    // clearing
+      // Viewing DOM Elements
+      const p = document.querySelector("p");
 
-    // Viewing DOM Elements
+      console.dir(p);
 
-    // Grouping together
+      // Grouping together
+      dogs.forEach(dog => {
+        console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old.`);
+        console.groupEnd(`${dog.name}`);
+      });
 
-    // counting
+      // counting
+      console.count("Wes");
 
-    // timing
+      // timing
+      console.time("Fetching Data");
 
-  </script>
-</body>
+      console.timeEnd("Fetching Data");
+    </script>
+  </body>
 </html>
