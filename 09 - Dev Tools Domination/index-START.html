@@ -1,65 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Console Tricks!</title>
-  </head>
-  <body>
-    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
 
-    <script>
-      const dogs = [{ name: "Snickers", age: 2 }, { name: "hugo", age: 8 }];
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-      function makeGreen() {
-        const p = document.querySelector("p");
-        p.style.color = "#BADA55";
-        p.style.fontSize = "50px";
-      }
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
-      // Regular
-      console.log("hello");
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
 
-      // Interpolated
-      console.log("Hello I am a %s string!", "random");
+    // Regular
 
-      // Styled
-      console.log("%c I am some great text", "font-size: 15px;");
+    // Interpolated
 
-      // warning!
-      console.warn("Uh Oh");
+    // Styled
 
-      // Error :|
-      console.error("Shit!");
+    // warning!
 
-      // Info
-      console.info("This is some information");
+    // Error :|
 
-      // Testing
-      console.assert(1 === 1, "That is wrong!");
+    // Info
 
-      // clearing
-      console.clear();
+    // Testing
 
-      // Viewing DOM Elements
-      const p = document.querySelector("p");
+    // clearing
 
-      console.dir(p);
+    // Viewing DOM Elements
 
-      // Grouping together
-      dogs.forEach(dog => {
-        console.group(`${dog.name}`);
-        console.log(`This is ${dog.name}`);
-        console.log(`${dog.name} is ${dog.age * 7} dog years old.`);
-        console.groupEnd(`${dog.name}`);
-      });
+    // Grouping together
 
-      // counting
-      console.count("Wes");
+    // counting
 
-      // timing
-      console.time("Fetching Data");
+    // timing
 
-      console.timeEnd("Fetching Data");
-    </script>
-  </body>
+  </script>
+</body>
 </html>
